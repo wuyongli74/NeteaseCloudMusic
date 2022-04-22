@@ -1,4 +1,4 @@
-# music
+# NeteaseCloudMusic
 
 ## Project setup
 ```
