@@ -2,8 +2,8 @@
   <div class="title-bar">
     <title-bar-item>
       <i slot="icon-ref" :class="refIcon"></i>
-      <div slot="tags" class="titles" v-for="item in tags.slice(0,1)">
-        <h4 v-for="item1 in (item.tags)">{{item1}}</h4>
+      <div slot="tags" class="title" v-for="item in tags.slice(0,3)">
+        <h4>{{item.name}}</h4>
       </div>
       <div slot="main-title" :titles="titles" class="title">
         <h4>{{titles}}</h4>

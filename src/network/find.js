@@ -31,6 +31,16 @@ export function getHotCatlist() {
   })
 }
 
+// 推荐新音乐
+export function getRecomSong(limit) {
+  return request({
+    url: '/personalized/newsong',
+    params: {
+      limit
+    }
+  })
+}
+
 // 热门榜单
 export function getHotRanking(limit) {
   return request({
@@ -40,3 +50,5 @@ export function getHotRanking(limit) {
     }
   })
 }
+
+

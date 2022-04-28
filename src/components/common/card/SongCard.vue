@@ -2,7 +2,7 @@
   <div class="card-center">
     <div class="card" v-for="item in result">
       <div class="card-img-live">
-        <img class="rec-img" :src="item.coverImgUrl" alt=""/>
+        <img class="rec-img" :src="item.picUrl" alt=""/>
         <div class="play-count-icon">
           <img class="icon-play" src="~assets/img/recommend/play.png" alt=""/>
         </div>

@@ -42,10 +42,6 @@
     border-right: 2px solid var(--color-text);
   }
 
-  .titles {
-    display: flex;
-  }
-
   .titles h4 {
     padding: 0 8px;
     border-right: 2px solid #333;
@@ -55,7 +51,6 @@
     margin-left: -8px;
   }
 
-  .titles h4:last-child,
   .title:last-child {
     border: none;
   }

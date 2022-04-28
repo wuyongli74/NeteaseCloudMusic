@@ -33,7 +33,7 @@
   }
 
   /deep/ .el-carousel__indicator--horizontal {
-   padding: 12px 3px;
+   padding: 12px 2px;
   }
   /deep/ .el-carousel__indicator--horizontal .el-carousel__button {
     width: 12px;

@@ -1,7 +1,7 @@
 <template>
   <div class="hot-ranking">
     <title-bar :refIcon="refIcon" :tags="tags" :titles="titles" :playIcon="playIcon" :more="more"/>
-    <song-card :result="tags"/>
+    <song-card :result="songs"/>
   </div>
 </template>
 
@@ -9,7 +9,7 @@
   import TitleBar from "components/common/titlebar/TitleBar";
   import SongCard from "components/common/card/SongCard";
 
-  import {getHotRanking, getHotCatlist} from "network/find";
+  import {getRecomSong, getHotCatlist} from "network/find";
 
 
   export default {
@@ -22,18 +22,20 @@
         more: '播放',
         playIcon: 'el-icon-caret-right',
         tags: [],
+        songs:[],
         num: '80'
       }
     },
     created() {
       getHotCatlist().then(res => {
         console.log(res);
+        this.tags= res.tags
       }).catch(err => {
         console.log(err);
       });
 
-      getHotRanking(3).then(res => {
-        this.tags = res.playlists;
+      getRecomSong().then(res => {
+        this.songs = res.result;
         console.log(res);
       }).catch(err => {
         console.log(err);
